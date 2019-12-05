@@ -1,8 +1,8 @@
 ### 1. Loading and Saving Data with Pandas
-    >Pandas for data analysis:
-     1. Convert a Python’s list, dictionary or Numpy array to a Pandas data frame
-     2. Open a local file using Pandas, usually a CSV file, but could also be a delimited text file (like TSV)
-     3. Open a remote file or database like a CSV or a JSONon a website through a URL or read from a SQL table/database*
+    > Pandas for data analysis:
+     > Convert a Python’s list, dictionary or Numpy array to a Pandas data frame
+     > Open a local file using Pandas, usually a CSV file, but could also be a delimited text file (like TSV)
+     > Open a remote file or database like a CSV or a JSONon a website through a URL or read from a SQL table/database*
 
 #### 1) Read a (csv) file into DataFrame: 
     df = pd.read_csv()
@@ -36,6 +36,7 @@
     
     #Create Decision Tree classifer object
     clf = DecisionTreeClassifier()
+    for more information about the parameters: https://www.cnblogs.com/pinard/p/6056319.html
 
     #Train Decision Tree Classifer
     clf = clf.fit(x_train,y_train)
@@ -44,7 +45,9 @@
     y_pred = clf.predict(x_test)
 
 ### 5. Evaluating Model
-    Estimate how accurately the classifier or model can predict the type of cultivars.
-    Accuracy can be computed by comparing actual test set values and predicted values.
+    > Estimate how accurately the classifier or model can predict the type of cultivars.
+      Accuracy can be computed by comparing actual test set values and predicted values.
+      print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+    
+    > print(confusion_matrix(y_true, y_pred))
 
-    print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
